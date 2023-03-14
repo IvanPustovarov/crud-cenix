@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <PostsList />
+    <v-pagination v-model="page" class="my-4" :length="15"></v-pagination>
   </div>
 </template>
 
@@ -10,6 +11,11 @@ export default {
   name: "App",
   components: {
     PostsList,
+  },
+  data() {
+    return {
+      page: 1,
+    };
   },
 };
 </script>
